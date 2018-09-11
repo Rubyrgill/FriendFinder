@@ -1,0 +1,26 @@
+body{
+    background-image: url("https://images.pexels.com/photos/370799/pexels-photo-370799.jpeg?cs=srgb&dl=light-art-blue-370799.jpg&fm=jpg")
+}
+
+.jumbotron{
+    font-family: 'Abril Fatface', cursive;
+    text-align: center;
+    background-color: lightyellow;
+    margin-left: 20%;
+    margin-right:20%;
+    margin-top: 2%;
+    border-radius: 30%;
+    border: solid lightblue 2px;
+}
+
+.display-4{
+    font-size: 100px;
+}
+
+#start-btn{
+    border-radius: 35%;
+    width: 20%;
+    padding: 2%;
+    font-size: 30px;
+    background-color: darkorchid;
+}
