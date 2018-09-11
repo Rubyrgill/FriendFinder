@@ -1,6 +1,6 @@
 // Dependencies Connecting 
 var express = require("express");
-var bodyparser = require("body-parser");
+var bodyParser = require("body-parser");
 var path = require("path");
 
 var app = express();
@@ -15,10 +15,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
+//Router
+require('./app/routing/apiRoutes.js')(app);
+require('./app/routing/htmlRoutes.js')(app);
 
 // app.get('/', function (req, res) {
 //     res.send('Hello World');
 // });
+// Displays all characters
+
 
 app.listen(PORT, function () {
     console.log('Running on PORT ' + PORT);
