@@ -24,3 +24,10 @@ body{
     font-size: 30px;
     background-color: darkorchid;
 }
+
+.forma {
+    background-color: lightyellow;
+    padding: 2%;
+    border-radius: 3%;
+}
+
