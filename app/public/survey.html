@@ -12,11 +12,11 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
         crossorigin="anonymous"></script>
-    <!--Style-->
-    <link rel="stylesheet" type="text/css" href="./style.css">
     <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
-
+    <!--Style-->
+    <link rel="stylesheet" type="text/css" href="./reset.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
 
 
 </head>
@@ -176,8 +176,7 @@
                     <div class="modal-body">
                         <h2 id="matchname"></h2>
                         <h2 id="display-content"></h2>
-                        <img id="matchpic" src="https://cdn2-www.dogtime.com/assets/uploads/2011/03/puppy-development-460x306.jpg"
-                            alt="">
+                        <img id="matchpic" src="" alt="">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -253,7 +252,7 @@
                     $('#q10').val("");
 
 
-                    // var localsite = "http://localhost:3000/api/friends";
+                    var localsite = "http://localhost:3000/api/friends";
 
                     //Otherwise
                 } else {
