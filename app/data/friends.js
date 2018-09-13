@@ -19,4 +19,4 @@ var friendList = [
 
 module.exports = friendList;
 
-console.log(friendList);
+// console.log(friendList);

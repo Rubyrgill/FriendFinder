@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Friend Finder</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--Bootstrap/JQuery-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
@@ -188,9 +188,9 @@
         <!--JS-->
         <!--________________________________________________-->
         <script type="text/javascript">
-
+            //on submit
             $("#submit").on("click", function () {
-
+                //verify 
                 function validateForm() {
                     var isValid = true;
                     $('.form-control').each(function () {
@@ -207,7 +207,7 @@
                 }
                 //if everything is filled
                 if (validateForm() == true) {
-                    //creates a new friend from the values submitted
+                    //creates a new user
                     var newUser = {
                         name: $('#name').val().trim(),
                         photo: $('#picture').val().trim(),
@@ -226,13 +226,14 @@
                     };
                     //Grabs current URL of website
                     var currentURL = window.location.origin;
-                    console.log(newUser);
+                    // console.log(newUser);
+
                     //AJAX posts the data to friends API.
                     $.post(currentURL + "/api/friends", newUser, function (data) {
                         //Grab the result from the AJAX post so that the best match's name and photo are displayed.
                         $("#matchname").text(data.name);
                         $("#matchpic").attr("src", data.photo);
-                        console.log("survey.html", data);
+                        // console.log("survey.html", data);
                     });
                     // Show the modal with the best match
                     $('.modal').modal();
@@ -252,13 +253,13 @@
                     $('#q10').val("");
 
 
-                    var localsite = "http://localhost:3000/api/friends";
+                    // var localsite = "http://localhost:3000/api/friends";
 
-
+                    //Otherwise
                 } else {
                     alert("Please Complete ALL missing fields!")
                 }
-                // return false;
+
             });
 
         </script>

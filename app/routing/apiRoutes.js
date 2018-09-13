@@ -2,7 +2,7 @@ var friendList = require('../data/friends.js');
 
 
 module.exports = function (app) {
-    //a GET route that displays JSON of all possible friends
+    //a GET, shows all friends
     app.get('/api/friends', function (req, res) {
         res.json(friendList);
     });
@@ -31,7 +31,7 @@ module.exports = function (app) {
             }
         }
 
-        //return bestMatch data
+        //return data
         var bff = friendList[bestMatch];
         res.json(bff);
 
